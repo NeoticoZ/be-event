@@ -3,7 +3,7 @@
     <a class="logo" href="#">
       <img
         class="logo__image"
-        src="@/assets/logo.svg"
+        :src="require(`@/assets/logo.svg`)"
         alt="logo com o nome be event"
       />
     </a>
@@ -38,6 +38,13 @@
   justify-content: space-between;
 
   text-align: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 99999;
 }
 
 .links {
@@ -47,7 +54,7 @@
 
   a {
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .navigation {
@@ -56,7 +63,7 @@
     gap: 2rem;
 
     &__link {
-      width: 3.8rem;
+      width: 4rem;
       height: 3rem;
 
       line-height: 3rem;
@@ -100,7 +107,7 @@
       background: var(--color-red);
       color: var(--color-white);
 
-      font-weight: 600;
+      font-weight: 500;
 
       border-radius: 20px;
 
